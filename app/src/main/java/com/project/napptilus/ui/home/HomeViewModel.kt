@@ -64,13 +64,6 @@ class HomeViewModel @Inject constructor(private val getOompaLoompasByPageUseCase
     }
 
 
-
-    fun reload() {
-        items?.let {
-            _state.value = _state.value.copy(items = it)
-        }
-    }
-
     private fun loading(isLoading: Boolean) {
          _state.value = _state.value.copy(isLoading = isLoading)
     }
