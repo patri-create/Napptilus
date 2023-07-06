@@ -1,0 +1,81 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="18dp"
+    app:cardBackgroundColor="@color/material_dynamic_neutral95">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="@color/neutral_40"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedImageView"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{item.getFullName()}"
+            android:background="@color/neutral_40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Oralle Lapthorne" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_gender"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/neutral_40"
+            app:layout_constraintStart_toEndOf="@+id/iv"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            android:text="@string/gender" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_gender_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@color/neutral_40"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_gender"
+            app:layout_constraintStart_toEndOf="@+id/tv_gender"
+            tools:text="F" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_profession"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/neutral_40"
+            app:layout_constraintStart_toEndOf="@+id/tv_gender_value"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            android:text="@string/profession" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_profession_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@color/neutral_40"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_profession"
+            app:layout_constraintStart_toEndOf="@+id/tv_profession"
+            tools:text="Developer" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

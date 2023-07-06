@@ -32,12 +32,12 @@ class HomeViewModel @Inject constructor(private val getOompaLoompasByPageUseCase
             loading(true)
             if(currentPage == totalPages) return@launch
             getOompaLoompasByPageUseCase(++currentPage).fold(::onError, ::onSuccess)
-            loading(false)
         }
     }
 
     private fun onError(error: Error) {
         _state.value = _state.value.copy(error = error)
+        loading(false)
     }
 
     private fun onSuccess(data: DataWrapper) {
@@ -60,6 +60,7 @@ class HomeViewModel @Inject constructor(private val getOompaLoompasByPageUseCase
         }
 
         _state.value = _state.value.copy(items = itemsFiltered)
+        loading(false)
     }
 
 

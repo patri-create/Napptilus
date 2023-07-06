@@ -56,6 +56,7 @@ class HomeFragment : Fragment() {
 
     private fun observers() {
         viewLifecycleOwner.launchAndCollect(vm.state) { uiState ->
+            controlShimmer(uiState.isLoading)
             uiState.items?.let {
                 binding.items = it
                 adapter.notifyDataSetChanged()
@@ -118,6 +119,16 @@ class HomeFragment : Fragment() {
             setOnSpinnerOutsideTouchListener { _, _ -> dismiss()}
         }
 
+    }
+
+    private fun controlShimmer(isLoading: Boolean) {
+        with(binding) {
+            loading = isLoading
+            when (isLoading) {
+                true -> shimmer.shimmerComponent.startShimmer()
+                false -> shimmer.shimmerComponent.stopShimmer()
+            }
+        }
     }
 
     companion object {

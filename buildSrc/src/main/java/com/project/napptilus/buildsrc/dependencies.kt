@@ -141,6 +141,11 @@ object Libs {
         private const val version = "1.2.5"
         const val spinner = "com.github.skydoves:powerspinner:$version"
     }
+    
+    object Shimmer {
+        private const val version = "0.4.0"
+        const val shimmer = "com.facebook.shimmer:shimmer:$version"
+    }
 
     object Timber {
         private const val version = "4.7.1"

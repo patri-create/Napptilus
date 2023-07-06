@@ -129,6 +129,9 @@ dependencies {
     /* PowerSpinner */
     implementation(Libs.PowerSpinner.spinner)
 
+    /* Shimmer */
+    implementation(Libs.Shimmer.shimmer)
+
     /* Timber */
     implementation(Libs.Timber.timber)
 

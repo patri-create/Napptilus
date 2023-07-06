@@ -73,7 +73,7 @@
                 android:textColor="@color/black"
                 android:textColorHint="@color/neutral_70"
                 android:textSize="14.5sp"
-                app:layout_constraintBottom_toTopOf="@+id/rv"
+                app:layout_constraintBottom_toTopOf="@+id/fl_container"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:spinner_arrow_gravity="end"
@@ -87,16 +87,41 @@
                 app:spinner_popup_background="@color/white"
                 app:spinner_popup_elevation="14dp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv"
+            <FrameLayout
+                android:id="@+id/fl_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:items="@{items}"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/bg"
-                tools:listitem="@layout/item_card_oompaloompa" />
+                app:layout_constraintTop_toBottomOf="@id/bg">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/marvel_shimmer_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="@{loading? View.VISIBLE : View.GONE}">
+
+                <include
+                    android:id="@+id/shimmer"
+                    layout="@layout/layout_shimmer" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="@{loading? View.GONE : View.VISIBLE}"
+                    app:items="@{items}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bg"
+                    tools:listitem="@layout/item_card_oompaloompa" />
+
+            </FrameLayout>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
