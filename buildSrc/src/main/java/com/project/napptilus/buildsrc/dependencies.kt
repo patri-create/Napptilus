@@ -97,6 +97,11 @@ object Libs {
         const val client = "com.squareup.okhttp3:okhttp:$version"
         const val loginInterceptor = "com.squareup.okhttp3:logging-interceptor:$version"
         const val mockWebServer = "com.squareup.okhttp3:mockwebserver:$version"
+
+        object Profiler {
+            private const val version = "1.0.8"
+            const val profiler = "com.localebro:okhttpprofiler:$version"
+        }
     }
 
     object Retrofit {

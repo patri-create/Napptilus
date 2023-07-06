@@ -102,6 +102,7 @@ dependencies {
     /* OkHttp3 */
     implementation(Libs.OkHttp3.client)
     implementation(Libs.OkHttp3.loginInterceptor)
+    implementation(Libs.OkHttp3.Profiler.profiler)
 
     /* Retrofit */
     implementation(Libs.Retrofit.retrofit)

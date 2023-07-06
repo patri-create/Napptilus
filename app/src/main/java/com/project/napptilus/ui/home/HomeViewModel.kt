@@ -27,6 +27,10 @@ class HomeViewModel @Inject constructor(private val getOompaLoompasByPageUseCase
     private val _state = MutableStateFlow(UiState())
     val state: StateFlow<UiState> = _state.asStateFlow()
 
+    init {
+        loadOompaLoompaItems()
+    }
+
     fun loadOompaLoompaItems() {
         viewModelScope.launch {
             loading(true)

@@ -41,7 +41,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         instances()
-        vm.loadOompaLoompaItems()
     }
 
     private fun instances() {

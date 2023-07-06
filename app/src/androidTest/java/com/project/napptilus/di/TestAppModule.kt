@@ -4,6 +4,7 @@ import android.content.Context
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
+import com.localebro.okhttpprofiler.OkHttpProfilerInterceptor
 import com.project.data.ApiService
 import com.project.data.interceptors.OnlineInterceptor
 import com.project.napptilus.BuildConfig
@@ -48,6 +49,7 @@ object TestAppModule {
     ): OkHttpClient = OkHttpClient.Builder().apply {
         addInterceptor(httpLoggingInterceptor)
         addInterceptor(onlineInterceptor)
+        addInterceptor(OkHttpProfilerInterceptor())
         cache(Cache(context.cacheDir, CACHE_MEGABYTES.toLong()))
         connectTimeout(60, TimeUnit.SECONDS)
         writeTimeout(60, TimeUnit.SECONDS)

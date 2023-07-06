@@ -45,7 +45,6 @@ class HomeViewModelTest {
 
     @Test
     fun `State loading when fetching`() = runTest {
-        vm.loadOompaLoompaItems()
         vm.state.test {
             assertEquals(HomeViewModel.UiState(isLoading = true), awaitItem())
             cancelAndIgnoreRemainingEvents()
@@ -54,7 +53,6 @@ class HomeViewModelTest {
 
     @Test
     fun `State spinnerItems and items after fetch`() = runTest {
-        vm.loadOompaLoompaItems()
         vm.state.test {
             assertEquals(HomeViewModel.UiState(), awaitItem())
             val spinnerItems = awaitItem().spinnerItems
@@ -66,7 +64,6 @@ class HomeViewModelTest {
 
     @Test
     fun `State stop loading after fetch`() = runTest {
-        vm.loadOompaLoompaItems()
         vm.state.test {
             assertEquals(HomeViewModel.UiState(), awaitItem())
             val spinnerItems = awaitItem().spinnerItems

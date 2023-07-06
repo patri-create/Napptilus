@@ -22,7 +22,6 @@ class HomeIntegrationTest {
     @Test
     fun `get oompa loompa from remote source`() = runTest {
         val vm = buildViewModel()
-        vm.loadOompaLoompaItems()
 
         vm.state.test {
             assertEquals(HomeViewModel.UiState(), awaitItem())
