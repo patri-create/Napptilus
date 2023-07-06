@@ -47,11 +47,14 @@ class HomeViewModel @Inject constructor(private val getOompaLoompasByPageUseCase
     private fun onSuccess(data: DataWrapper) {
         data.total?.let { totalPages = it }
         items?.addAll(data.results!!)
-        Timber.d("size ${items?.size}")
+        setupSpinner()
+        onFilterSelected()
+    }
+
+    private fun setupSpinner() {
         var spinnerItems = setOf(ALL)
         items?.forEach { item -> item.profession?.let { spinnerItems = spinnerItems.plus(it) } }
         _state.value = _state.value.copy(spinnerItems = spinnerItems, error = null)
-       onFilterSelected()
     }
 
     fun onFilterSelected(gender: String? = null, profession: String? = null) {
