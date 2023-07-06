@@ -1,4 +1,4 @@
-package com.project.napptilus.ui
+package com.project.napptilus.ui.network
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

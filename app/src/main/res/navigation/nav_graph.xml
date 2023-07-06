@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/network_dest"
-        android:name="com.project.napptilus.ui.NetworkFragment"
+        android:name="com.project.napptilus.ui.network.NetworkFragment"
         android:label="fragment_network"
         tools:layout="@layout/fragment_network" />
     <fragment
