@@ -5,4 +5,20 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="NetworkTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">38sp</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/robotoflex_bold</item>
+        <item name="android:textColor">@color/neutral_70</item>
+    </style>
+
+    <style name="NetworkDescription" parent="Widget.AppCompat.TextView">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/robotoflex_bold</item>
+        <item name="android:textColor">@color/neutral_40</item>
+    </style>
+
 </resources>

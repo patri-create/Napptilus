@@ -9,6 +9,10 @@
     <!--    Detail  -->
     <string name="description">Description</string>
 
+    <!--    Network  -->
+    <string name="internet_connection_title">No Internet Connection</string>
+    <string name="internet_connection_description">Try to connect your device again and you will return to the app automatically</string>
+
     <!--    Errors  -->
     <string name="error_connectivity">Connectivity error</string>
     <string name="error_server">Server error</string>
