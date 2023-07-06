@@ -97,7 +97,7 @@ class HomeFragment : Fragment() {
         with(binding) {
             rv.adapter = adapter
             rv.addItemDecoration(MarginItemDecoration(15))
-            rv.setItemViewCacheSize(10)
+            rv.setItemViewCacheSize(20)
         }
     }
 

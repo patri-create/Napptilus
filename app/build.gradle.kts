@@ -98,6 +98,7 @@ dependencies {
 
 
     /* OkHttp3 */
+    implementation(Libs.OkHttp3.client)
     implementation(Libs.OkHttp3.loginInterceptor)
 
     /* Retrofit */

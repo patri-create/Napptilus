@@ -14,6 +14,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.project.domain.OompaLoompa
 import com.project.napptilus.R
@@ -77,7 +78,7 @@ fun Fragment.buildDetailState(
 fun AppCompatImageView.loadImage(image: String?) {
     if (!image.isNullOrEmpty()) {
         val options = RequestOptions().centerCrop()
-        Glide.with(context).load(image).apply(options).into(this)
+        Glide.with(context).load(image).diskCacheStrategy(DiskCacheStrategy.ALL).apply(options).into(this)
     }
 }
 

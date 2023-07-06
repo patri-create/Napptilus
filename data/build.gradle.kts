@@ -33,6 +33,10 @@ dependencies {
     implementation(Libs.Retrofit.converterMoshi)
     implementation(Libs.Retrofit.converterJackson)
 
+    /* OkHttp3 */
+    implementation(Libs.OkHttp3.client)
+    implementation(Libs.OkHttp3.loginInterceptor)
+
     /* Hilt */
     implementation(Libs.Hilt.android)
     implementation(Libs.Hilt.compiler)

@@ -5,12 +5,14 @@ import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import com.project.data.ApiService
+import com.project.data.interceptors.OnlineInterceptor
 import com.project.napptilus.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -24,6 +26,8 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
+    private const val CACHE_MEGABYTES = 10 * 1014 * 1024
+
     @Singleton
     @Provides
     fun providesHttpLoggingInterceptor() = HttpLoggingInterceptor().apply {
@@ -32,10 +36,18 @@ object NetworkModule {
 
     @Singleton
     @Provides
+    fun providesOnlineInterceptor() = OnlineInterceptor()
+
+    @Singleton
+    @Provides
     fun providesOkHttp(
-        httpLoggingInterceptor: HttpLoggingInterceptor
+        httpLoggingInterceptor: HttpLoggingInterceptor,
+        onlineInterceptor: OnlineInterceptor,
+        @ApplicationContext context: Context
     ): OkHttpClient = OkHttpClient.Builder().apply {
         addInterceptor(httpLoggingInterceptor)
+        addInterceptor(onlineInterceptor)
+        cache(Cache(context.cacheDir, CACHE_MEGABYTES.toLong()))
         connectTimeout(60, TimeUnit.SECONDS)
         writeTimeout(60, TimeUnit.SECONDS)
         readTimeout(60, TimeUnit.SECONDS)
@@ -73,4 +85,5 @@ object NetworkModule {
     @Singleton
     @Provides
     fun providesApiService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
+
 }
