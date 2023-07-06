@@ -1,14 +1,17 @@
-package com.project.mytemplate.di
+package com.project.napptilus.di
 
+import android.content.Context
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import com.project.data.ApiService
-import com.project.mytemplate.BuildConfig
+import com.project.napptilus.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -29,7 +32,10 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun providesOkHttp(): OkHttpClient = OkHttpClient.Builder().apply {
+    fun providesOkHttp(
+        httpLoggingInterceptor: HttpLoggingInterceptor
+    ): OkHttpClient = OkHttpClient.Builder().apply {
+        addInterceptor(httpLoggingInterceptor)
         connectTimeout(60, TimeUnit.SECONDS)
         writeTimeout(60, TimeUnit.SECONDS)
         readTimeout(60, TimeUnit.SECONDS)

@@ -1,4 +1,4 @@
-package com.project.mytemplate.common
+package com.project.napptilus.common
 
 import android.content.Context
 import android.net.ConnectivityManager

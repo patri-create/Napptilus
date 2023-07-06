@@ -1,9 +1,9 @@
-package com.project.mytemplate.base
+package com.project.napptilus.ui.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.project.mytemplate.common.NetworkStatus
-import com.project.mytemplate.common.networkMap
+import com.project.napptilus.common.NetworkStatus
+import com.project.napptilus.common.networkMap
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

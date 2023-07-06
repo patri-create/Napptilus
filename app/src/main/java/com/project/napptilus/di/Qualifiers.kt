@@ -1,4 +1,4 @@
-package com.project.mytemplate.di
+package com.project.napptilus.di
 import javax.inject.Qualifier
 
 @Qualifier

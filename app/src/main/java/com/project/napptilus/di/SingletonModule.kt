@@ -1,4 +1,4 @@
-package com.project.mytemplate.di
+package com.project.napptilus.di
 
 import android.app.Application
 import android.content.Context
@@ -7,7 +7,7 @@ import com.project.data.datasource.PreferencesStorage
 import com.project.data.datasource.RemoteDataSource
 import com.project.data.repositories.PreferencesRepository
 import com.project.data.repositories.RemoteRepository
-import com.project.mytemplate.common.NetworkStatus
+import com.project.napptilus.common.NetworkStatus
 import com.project.usecases.FindPreferencesUseCase
 import com.project.usecases.SavePreferencesUseCase
 import dagger.Module

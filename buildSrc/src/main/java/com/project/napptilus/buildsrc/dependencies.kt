@@ -137,6 +137,16 @@ object Libs {
         const val inject = "javax.inject:javax.inject:1"
     }
 
+    object PowerSpinner {
+        private const val version = "1.2.5"
+        const val spinner = "com.github.skydoves:powerspinner:$version"
+    }
+
+    object Timber {
+        private const val version = "4.7.1"
+        const val timber = "com.jakewharton.timber:timber:$version"
+    }
+
     object JUnit {
         private const val version = "4.13.2"
         const val junit = "junit:junit:$version"

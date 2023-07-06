@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--    Basics -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,4 +8,62 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--    Neutrals -->
+    <color name="neutral_00">#FFFFFFFF</color>
+    <color name="neutral_05">#F2F2F2</color>
+    <color name="neutral_10">#E6E6E6</color>
+    <color name="neutral_20">#CCCCCC</color>
+    <color name="neutral_30">#B3B3B3</color>
+    <color name="neutral_40">#999999</color>
+    <color name="neutral_50">#808080</color>
+    <color name="neutral_60">#666666</color>
+    <color name="neutral_70">#4D4D4D</color>
+    <color name="neutral_80">#333333</color>
+    <color name="neutral_90">#1A1A1A</color>
+    <color name="neutral_100">#000000</color>
+
+    <!--    Blues -->
+    <color name="blue_100">#CCE4F6</color>
+    <color name="blue_200">#99C9F3</color>
+    <color name="blue_300">#66AEEF</color>
+    <color name="blue_400">#3394EB</color>
+    <color name="blue_500">#0079E7</color>
+    <color name="blue_600">#006ED0</color>
+    <color name="blue_700">#0063B8</color>
+    <color name="blue_800">#0058A1</color>
+    <color name="blue_900">#004C89</color>
+
+    <!--    Reds -->
+    <color name="red_100">#FFC1C1</color>
+    <color name="red_200">#FF8282</color>
+    <color name="red_300">#FF4343</color>
+    <color name="red_400">#FF0404</color>
+    <color name="red_500">#E50000</color>
+    <color name="red_600">#CC0000</color>
+    <color name="red_700">#B30000</color>
+    <color name="red_800">#990000</color>
+    <color name="red_900">#800000</color>
+
+    <!--    Greens -->
+    <color name="green_100">#D3FFD3</color>
+    <color name="green_200">#A7FFA7</color>
+    <color name="green_300">#7AFF7A</color>
+    <color name="green_400">#4EFF4E</color>
+    <color name="green_500">#22FF22</color>
+    <color name="green_600">#1FDB1F</color>
+    <color name="green_700">#1AAD1A</color>
+    <color name="green_800">#178017</color>
+    <color name="green_900">#145C14</color>
+
+    <!--    Yellows -->
+    <color name="yellow_100">#FFF9C1</color>
+    <color name="yellow_200">#FFED8C</color>
+    <color name="yellow_300">#FFE158</color>
+    <color name="yellow_400">#FFD623</color>
+    <color name="yellow_500">#FFC300</color>
+    <color name="yellow_600">#E6AC00</color>
+    <color name="yellow_700">#BF9500</color>
+    <color name="yellow_800">#997E00</color>
+    <color name="yellow_900">#806600</color>
 </resources>

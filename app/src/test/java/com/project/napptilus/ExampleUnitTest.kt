@@ -1,4 +1,4 @@
-package com.project.mytemplate
+package com.project.napptilus
 
 import org.junit.Test
 

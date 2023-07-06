@@ -1,7 +1,7 @@
-package com.project.mytemplate.base
+package com.project.napptilus.ui.base
 
 import androidx.navigation.NavController
-import com.project.mytemplate.R
+import com.project.napptilus.R
 
 class MainState(private val activity: MainActivity, private val navController: NavController) {
 

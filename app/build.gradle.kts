@@ -10,7 +10,7 @@ android {
     compileSdk = AndroidConfig.compileSdk
 
     defaultConfig {
-        applicationId = "com.project.mytemplate"
+        applicationId = "com.project.napptilus"
         minSdk = AndroidConfig.minSdk
         targetSdk = AndroidConfig.targetSdk
         versionCode = 1
@@ -25,7 +25,7 @@ android {
             applicationIdSuffix = ".dev"
             versionNameSuffix = "-DEV"
 
-            buildConfigField("String", "BASE_URL", "\"https://example.com\"")
+            buildConfigField("String", "BASE_URL", "\"https://2q2woep105.execute-api.eu-west-1.amazonaws.com\"")
         }
     }
 
@@ -125,6 +125,12 @@ dependencies {
 
     /* Location Services */
     implementation(Libs.playServicesLocation)
+
+    /* PowerSpinner */
+    implementation(Libs.PowerSpinner.spinner)
+
+    /* Timber */
+    implementation(Libs.Timber.timber)
 
     /* Test */
     testImplementation(Libs.JUnit.junit)

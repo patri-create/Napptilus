@@ -12,6 +12,6 @@ class PreferencesStorage @Inject constructor(context: Context) {
     )
 
     companion object {
-        const val PREFERENCES_FILE = "com.project.mytemplate.prefs"
+        const val PREFERENCES_FILE = "com.project.napptilus.prefs"
     }
 }

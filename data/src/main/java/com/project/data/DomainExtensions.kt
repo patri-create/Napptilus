@@ -10,14 +10,15 @@ import java.io.IOException
 import com.project.domain.Error
 
 suspend fun <T, R> domainCall(action: suspend () -> T): Either<Error, R> = try {
-    action().right().toDomain()
+    val result: R = action().toDomain()
+    result.right()
 } catch (e: Exception) {
     e.toError().left()
 }
 
 fun <T, R> T.toDomain(): R {
-    val result =  when(this) {
-        is DataWrapperDTO -> this.asDomain()
+    val result = when(this) {
+        is DataWrapperDTO -> asDomain()
         else -> throw IllegalArgumentException("Unsupported conversion")
     }
 

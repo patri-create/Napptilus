@@ -1,14 +1,14 @@
-package com.project.mytemplate.base
+package com.project.napptilus.ui.base
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import com.project.mytemplate.R
-import com.project.mytemplate.common.buildMainState
-import com.project.mytemplate.common.launchAndCollect
-import com.project.mytemplate.databinding.ActivityMainBinding
+import com.project.napptilus.R
+import com.project.napptilus.common.buildMainState
+import com.project.napptilus.common.launchAndCollect
+import com.project.napptilus.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

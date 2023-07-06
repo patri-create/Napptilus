@@ -1,4 +1,4 @@
-package com.project.mytemplate.di
+package com.project.napptilus.di
 
 import com.project.data.datasource.PreferencesDataSource
 import com.project.data.datasource.PreferencesDataSourceImp
