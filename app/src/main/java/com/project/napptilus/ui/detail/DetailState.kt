@@ -4,7 +4,6 @@ import android.content.Context
 import androidx.navigation.NavController
 import com.project.domain.Error
 import com.project.napptilus.R
-import com.project.napptilus.ui.home.HomeFragmentDirections
 
 class DetailState (private val context: Context, private val navController: NavController) {
 

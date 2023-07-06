@@ -2,7 +2,6 @@ package com.project.usecases
 
 import arrow.core.Either
 import com.project.data.repositories.RemoteRepository
-import com.project.domain.DataWrapper
 import com.project.domain.Error
 import com.project.domain.OompaLoompa
 import javax.inject.Inject

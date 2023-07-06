@@ -3,7 +3,6 @@ package com.project.napptilus.ui.home
 import android.content.Context
 import androidx.navigation.NavController
 import com.project.domain.Error
-import com.project.domain.OompaLoompa
 import com.project.napptilus.R
 
 class HomeState(private val context: Context, private val navController: NavController) {

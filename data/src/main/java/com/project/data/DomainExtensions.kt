@@ -6,9 +6,9 @@ import arrow.core.right
 import com.project.data.responses.DataWrapperDTO
 import com.project.data.responses.ResultDTO
 import com.project.data.responses.asDomain
+import com.project.domain.Error
 import retrofit2.HttpException
 import java.io.IOException
-import com.project.domain.Error
 
 suspend fun <T, R> domainCall(action: suspend () -> T): Either<Error, R> = try {
     val result: R = action().toDomain()

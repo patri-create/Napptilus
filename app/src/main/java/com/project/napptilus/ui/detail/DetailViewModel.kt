@@ -2,18 +2,14 @@ package com.project.napptilus.ui.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.project.domain.DataWrapper
 import com.project.domain.Error
 import com.project.domain.OompaLoompa
-import com.project.napptilus.ui.home.HomeFragment
-import com.project.napptilus.ui.home.HomeViewModel
 import com.project.usecases.GetOompaLoompasByIdUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel

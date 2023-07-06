@@ -13,15 +13,11 @@ import com.project.napptilus.ui.base.MainActivity
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import okhttp3.OkHttpClient
 import okhttp3.mockwebserver.MockResponse
 import org.hamcrest.Matchers.allOf
-
-import org.junit.Test
-
 import org.junit.Before
 import org.junit.Rule
-import javax.inject.Inject
+import org.junit.Test
 
 /**
  * Instrumented test, which will execute on an Android device.

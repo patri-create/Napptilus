@@ -1,24 +1,20 @@
 package com.project.napptilus.ui.home
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.NestedScrollView
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.project.domain.OompaLoompa
 import com.project.napptilus.R
 import com.project.napptilus.common.MarginItemDecoration
 import com.project.napptilus.common.buildHomeState
 import com.project.napptilus.common.launchAndCollect
-import com.project.napptilus.common.toDp
 import com.project.napptilus.databinding.FragmentHomeBinding
 import com.skydoves.powerspinner.IconSpinnerAdapter
 import com.skydoves.powerspinner.IconSpinnerItem
-import com.skydoves.powerspinner.OnSpinnerItemSelectedListener
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 

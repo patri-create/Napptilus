@@ -1,6 +1,5 @@
 package com.project.napptilus.di
 
-import android.app.Application
 import android.content.Context
 import com.project.data.datasource.PreferencesDataSource
 import com.project.data.datasource.PreferencesStorage

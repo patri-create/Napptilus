@@ -4,11 +4,9 @@ import app.cash.turbine.test
 import com.project.napptilus.rules.CoroutinesTestRule
 import com.project.napptilus.ui.home.HomeViewModel
 import com.project.napptilus.utils.buildRemoteRepository
-import com.project.usecases.GetOompaLoompasByIdUseCase
 import com.project.usecases.GetOompaLoompasByPageUseCase
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
-import org.junit.Assert
 import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test

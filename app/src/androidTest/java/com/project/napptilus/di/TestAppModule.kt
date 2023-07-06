@@ -7,7 +7,6 @@ import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import com.localebro.okhttpprofiler.OkHttpProfilerInterceptor
 import com.project.data.ApiService
 import com.project.data.interceptors.OnlineInterceptor
-import com.project.napptilus.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.android.qualifiers.ApplicationContext

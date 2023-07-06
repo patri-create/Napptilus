@@ -1,8 +1,6 @@
 package com.project.napptilus.utils
 
 import com.project.data.ApiService
-import com.project.data.responses.FavoriteDTO
-import com.project.data.responses.ResultDTO
 import com.project.domain.DataWrapper
 import com.project.domain.Favorite
 import com.project.domain.OompaLoompa
