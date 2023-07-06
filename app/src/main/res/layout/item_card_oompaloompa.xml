@@ -32,6 +32,7 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_name"
+            style="@style/Title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"

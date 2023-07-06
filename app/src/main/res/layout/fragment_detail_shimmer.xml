@@ -24,6 +24,7 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_name"
+        style="@style/Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/neutral_40"
@@ -62,6 +63,7 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_description"
+            style="@style/Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
