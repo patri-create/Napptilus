@@ -16,7 +16,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.project.napptilus.di.HiltTestRunner"
     }
 
     flavorDimensions += "version"
@@ -33,11 +33,13 @@ android {
         debug {
             isMinifyEnabled = false
             isDebuggable = true
+            manifestPlaceholders["clearTraffic"] = true
         }
         release {
             isMinifyEnabled = false
             isDebuggable = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            manifestPlaceholders["clearTraffic"] = false
         }
     }
     compileOptions {
