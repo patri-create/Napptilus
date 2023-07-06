@@ -38,7 +38,7 @@ class NetworkStatus @Inject constructor(context: Context) {
         awaitClose {
             connectivityManager.unregisterNetworkCallback(networkStatusCallback)
         }
-    } .distinctUntilChanged()
+    }.distinctUntilChanged()
 
     sealed class NetworkStatusState {
         object Available : NetworkStatusState()

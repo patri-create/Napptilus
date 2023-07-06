@@ -78,14 +78,15 @@ fun Fragment.buildDetailState(
 fun AppCompatImageView.loadImage(image: String?) {
     if (!image.isNullOrEmpty()) {
         val options = RequestOptions().centerCrop()
-        Glide.with(context).load(image).diskCacheStrategy(DiskCacheStrategy.ALL).apply(options).into(this)
+        Glide.with(context).load(image).diskCacheStrategy(DiskCacheStrategy.ALL).apply(options)
+            .into(this)
     }
 }
 
 @BindingAdapter("items")
 fun RecyclerView.setItems(items: List<OompaLoompa>?) {
     (adapter as? HomeAdapter)?.let {
-        it.items = items?: emptyList()
+        it.items = items ?: emptyList()
     }
 }
 //endregion
@@ -93,6 +94,7 @@ fun RecyclerView.setItems(items: List<OompaLoompa>?) {
 //region Utils
 fun Int.toDp(context: Context): Int {
     val displayMetrics = context.resources.displayMetrics
-    return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this.toFloat(), displayMetrics).toInt()
+    return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this.toFloat(), displayMetrics)
+        .toInt()
 }
 //endregion

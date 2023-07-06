@@ -44,7 +44,8 @@ object Libs {
             private const val version = "2.5.3"
             const val NavigationFragment = "androidx.navigation:navigation-fragment-ktx:$version"
             const val NavigationUI = "androidx.navigation:navigation-ui-ktx:$version"
-            const val gradlePlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$version"
+            const val gradlePlugin =
+                "androidx.navigation:navigation-safe-args-gradle-plugin:$version"
         }
 
         object SwipeLayout {
@@ -72,8 +73,9 @@ object Libs {
                 private const val version = "1.1.3"
                 const val junit = "androidx.test.ext:junit-ktx:$version"
             }
-            object Espresso{
-                private const val version="3.4.0"
+
+            object Espresso {
+                private const val version = "3.4.0"
                 const val contrib = "androidx.test.espresso:espresso-contrib:$version"
             }
         }
@@ -89,7 +91,8 @@ object Libs {
 
     object DotsIndicator {
         private const val version = "1.2.3"
-        const val dotsIndicator = "ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:$version"
+        const val dotsIndicator =
+            "ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:$version"
     }
 
     object OkHttp3 {
@@ -147,7 +150,7 @@ object Libs {
         private const val version = "1.2.5"
         const val spinner = "com.github.skydoves:powerspinner:$version"
     }
-    
+
     object Shimmer {
         private const val version = "0.4.0"
         const val shimmer = "com.facebook.shimmer:shimmer:$version"
@@ -170,6 +173,6 @@ object Libs {
 
     object Turbine {
         private const val version = "0.7.0"
-        const val turbine =  "app.cash.turbine:turbine:0.7.0"
+        const val turbine = "app.cash.turbine:turbine:0.7.0"
     }
 }

@@ -56,5 +56,5 @@ fun ResultDTO.asDomain(): OompaLoompa =
         description
     )
 
-fun FavoriteDTO.asDomain(): Favorite = 
+fun FavoriteDTO.asDomain(): Favorite =
     Favorite(color, food, randomString, song)

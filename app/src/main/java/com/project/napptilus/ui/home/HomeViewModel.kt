@@ -15,7 +15,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(private val getOompaLoompasByPageUseCase: GetOompaLoompasByPageUseCase): ViewModel(){
+class HomeViewModel @Inject constructor(private val getOompaLoompasByPageUseCase: GetOompaLoompasByPageUseCase) :
+    ViewModel() {
 
     private var items: MutableList<OompaLoompa>? = mutableListOf()
     private var totalPages = 1
@@ -33,7 +34,7 @@ class HomeViewModel @Inject constructor(private val getOompaLoompasByPageUseCase
     fun loadOompaLoompaItems() {
         viewModelScope.launch {
             loading(true)
-            if(currentPage == totalPages) return@launch
+            if (currentPage == totalPages) return@launch
             getOompaLoompasByPageUseCase(++currentPage).fold(::onError, ::onSuccess)
         }
     }
@@ -71,7 +72,7 @@ class HomeViewModel @Inject constructor(private val getOompaLoompasByPageUseCase
 
 
     private fun loading(isLoading: Boolean) {
-         _state.value = _state.value.copy(isLoading = isLoading)
+        _state.value = _state.value.copy(isLoading = isLoading)
     }
 
     data class UiState(

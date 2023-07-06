@@ -8,12 +8,12 @@ import com.project.domain.Error
 import com.project.domain.OompaLoompa
 import javax.inject.Inject
 
-class RemoteDataSourceImp @Inject constructor(private val api: ApiService): RemoteDataSource {
+class RemoteDataSourceImp @Inject constructor(private val api: ApiService) : RemoteDataSource {
     override suspend fun getOompaLoompasByPage(page: Int): Either<Error, DataWrapper> = domainCall {
         api.getOompaLoompasByPage(page)
     }
 
-    override suspend fun getOompaLoompasById(id: Int): Either<Error, OompaLoompa> = domainCall{
+    override suspend fun getOompaLoompasById(id: Int): Either<Error, OompaLoompa> = domainCall {
         api.getOompaLoompasById(id)
     }
 }

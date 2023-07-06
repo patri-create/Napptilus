@@ -81,7 +81,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.sv.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { _, _, scrollY, _, _ ->
-            if(!binding.sv.canScrollVertically(1)) {
+            if (!binding.sv.canScrollVertically(1)) {
                 Timber.d("setOnScrollChangeListener")
                 vm.loadOompaLoompaItems()
             }
@@ -110,7 +110,7 @@ class HomeFragment : Fragment() {
                 vm.onFilterSelected(profession = value.text.toString())
             }
 
-            setOnSpinnerOutsideTouchListener { _, _ -> dismiss()}
+            setOnSpinnerOutsideTouchListener { _, _ -> dismiss() }
         }
 
     }

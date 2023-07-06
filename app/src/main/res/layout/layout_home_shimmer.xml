@@ -15,18 +15,31 @@
         android:orientation="vertical">
 
         <include layout="@layout/item_card_oompaloompa_shimmer" />
+
         <include layout="@layout/item_card_oompaloompa_shimmer" />
+
         <include layout="@layout/item_card_oompaloompa_shimmer" />
+
         <include layout="@layout/item_card_oompaloompa_shimmer" />
+
         <include layout="@layout/item_card_oompaloompa_shimmer" />
+
         <include layout="@layout/item_card_oompaloompa_shimmer" />
+
         <include layout="@layout/item_card_oompaloompa_shimmer" />
+
         <include layout="@layout/item_card_oompaloompa_shimmer" />
+
         <include layout="@layout/item_card_oompaloompa_shimmer" />
+
         <include layout="@layout/item_card_oompaloompa_shimmer" />
+
         <include layout="@layout/item_card_oompaloompa_shimmer" />
+
         <include layout="@layout/item_card_oompaloompa_shimmer" />
+
         <include layout="@layout/item_card_oompaloompa_shimmer" />
+
         <include layout="@layout/item_card_oompaloompa_shimmer" />
     </LinearLayout>
 </com.facebook.shimmer.ShimmerFrameLayout>

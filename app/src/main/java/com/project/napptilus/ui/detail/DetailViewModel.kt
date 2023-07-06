@@ -13,7 +13,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class DetailViewModel @Inject constructor(private val getOompaLoompasByIdUseCase: GetOompaLoompasByIdUseCase): ViewModel() {
+class DetailViewModel @Inject constructor(private val getOompaLoompasByIdUseCase: GetOompaLoompasByIdUseCase) :
+    ViewModel() {
 
     private var item: OompaLoompa? = null
 
@@ -27,6 +28,7 @@ class DetailViewModel @Inject constructor(private val getOompaLoompasByIdUseCase
             loading(false)
         }
     }
+
     private fun onError(error: Error) {
         _state.value = _state.value.copy(error = error)
     }

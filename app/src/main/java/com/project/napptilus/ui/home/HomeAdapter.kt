@@ -14,10 +14,12 @@ class HomeAdapter(private val onClickItem: (Int) -> Unit) :
         notifyDataSetChanged()
     }
 
-    class ViewHolder(val binding: ItemCardOompaloompaBinding) : RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding: ItemCardOompaloompaBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ItemCardOompaloompaBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemCardOompaloompaBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
@@ -34,6 +36,6 @@ class HomeAdapter(private val onClickItem: (Int) -> Unit) :
 
     private fun fillOompaLoompaItem(binding: ItemCardOompaloompaBinding, item: OompaLoompa) {
         binding.item = item
-        binding.root.setOnClickListener { item.id?.let {onClickItem(it)} }
+        binding.root.setOnClickListener { item.id?.let { onClickItem(it) } }
     }
 }

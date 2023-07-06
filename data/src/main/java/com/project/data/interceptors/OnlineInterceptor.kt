@@ -32,7 +32,7 @@ class OnlineInterceptor : Interceptor {
      * @return true si el método de la petición es de tipo GET
      */
     private fun isGet(request: Request): Boolean {
-       return request.method.equals("get", ignoreCase = true)
+        return request.method.equals("get", ignoreCase = true)
     }
 
 

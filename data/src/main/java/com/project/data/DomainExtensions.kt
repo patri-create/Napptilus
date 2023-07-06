@@ -18,7 +18,7 @@ suspend fun <T, R> domainCall(action: suspend () -> T): Either<Error, R> = try {
 }
 
 fun <T, R> T.toDomain(): R {
-    val result = when(this) {
+    val result = when (this) {
         is DataWrapperDTO -> asDomain()
         is ResultDTO -> asDomain()
         else -> throw IllegalArgumentException("Unsupported conversion")

@@ -25,7 +25,11 @@ android {
             applicationIdSuffix = ".dev"
             versionNameSuffix = "-DEV"
 
-            buildConfigField("String", "BASE_URL", "\"https://2q2woep105.execute-api.eu-west-1.amazonaws.com\"")
+            buildConfigField(
+                "String",
+                "BASE_URL",
+                "\"https://2q2woep105.execute-api.eu-west-1.amazonaws.com\""
+            )
         }
     }
 
@@ -38,7 +42,10 @@ android {
         release {
             isMinifyEnabled = false
             isDebuggable = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
             manifestPlaceholders["clearTraffic"] = false
         }
     }

@@ -4,8 +4,8 @@
     android:id="@+id/cv"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="18dp"
-    app:cardBackgroundColor="@color/material_dynamic_neutral95">
+    app:cardBackgroundColor="@color/material_dynamic_neutral95"
+    app:cardCornerRadius="18dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -25,8 +25,8 @@
             android:id="@+id/tv_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:background="@color/neutral_40"
+            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv"
             app:layout_constraintTop_toTopOf="parent"
@@ -39,9 +39,9 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"
             android:background="@color/neutral_40"
+            android:text="@string/gender"
             app:layout_constraintStart_toEndOf="@+id/iv"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name"
-            android:text="@string/gender" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_gender_value"
@@ -60,9 +60,9 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"
             android:background="@color/neutral_40"
+            android:text="@string/profession"
             app:layout_constraintStart_toEndOf="@+id/tv_gender_value"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name"
-            android:text="@string/profession" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_profession_value"

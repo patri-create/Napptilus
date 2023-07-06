@@ -57,7 +57,13 @@ class HomeViewModelTest {
             assertEquals(HomeViewModel.UiState(), awaitItem())
             val spinnerItems = awaitItem().spinnerItems
             val items = awaitItem().items
-            assertEquals(HomeViewModel.UiState(isLoading = false, spinnerItems = spinnerItems, items = items), awaitItem())
+            assertEquals(
+                HomeViewModel.UiState(
+                    isLoading = false,
+                    spinnerItems = spinnerItems,
+                    items = items
+                ), awaitItem()
+            )
             cancelAndIgnoreRemainingEvents()
         }
     }
@@ -68,7 +74,13 @@ class HomeViewModelTest {
             assertEquals(HomeViewModel.UiState(), awaitItem())
             val spinnerItems = awaitItem().spinnerItems
             val items = awaitItem().items
-            assertEquals(HomeViewModel.UiState(isLoading = false, spinnerItems = spinnerItems, items = items), awaitItem())
+            assertEquals(
+                HomeViewModel.UiState(
+                    isLoading = false,
+                    spinnerItems = spinnerItems,
+                    items = items
+                ), awaitItem()
+            )
             cancelAndIgnoreRemainingEvents()
         }
     }

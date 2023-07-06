@@ -5,6 +5,7 @@
     <data>
 
         <import type="com.project.domain.OompaLoompa" />
+
         <import type="android.view.View" />
 
         <variable
@@ -30,102 +31,102 @@
         app:layout_constraintStart_toStartOf="parent">
 
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/sh_container"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/sh_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="@{loading? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/shimmer"
+                layout="@layout/layout_detail_shimmer" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <FrameLayout
+            android:id="@+id/fl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="@{loading? View.VISIBLE : View.GONE}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="300dp"
+                app:loadImage="@{item.image}" />
+        </FrameLayout>
 
-                <include
-                    android:id="@+id/shimmer"
-                    layout="@layout/layout_detail_shimmer" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            style="@style/Title.Detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{item.fullName}"
+            app:layout_constraintBottom_toBottomOf="@id/fl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fl"
+            tools:text="Oralle Lapthorne" />
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <FrameLayout
-                android:id="@+id/fl"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@{item.email}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            tools:text="mkaradzas1@visualengin.com" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/iv"
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    app:loadImage="@{item.image}" />
-            </FrameLayout>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_name"
-                style="@style/Title.Detail"
+                android:id="@+id/tv_description"
+                style="@style/Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@{item.fullName}"
-                app:layout_constraintBottom_toBottomOf="@id/fl"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/fl"
-                tools:text="Oralle Lapthorne" />
-
+                android:layout_marginBottom="15dp"
+                android:text="@string/description" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_email"
+                android:id="@+id/tv_description_value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="center"
-                android:text="@{item.email}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_name"
-                tools:text="mkaradzas1@visualengin.com" />
+                android:text="@{item.description}"
+                tools:text="This is the description of this OompaLoompa Item" />
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/ll_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="25dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_name">
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_description"
-                    style="@style/Title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:text="@string/description" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_description_value"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@{item.description}"
-                    tools:text="This is the description of this OompaLoompa Item" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@{error}"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
-                android:textColor="?attr/colorError"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{error}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textColor="?attr/colorError"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

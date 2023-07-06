@@ -33,4 +33,4 @@ data class Favorite(
     val food: String?,
     val randomString: String?,
     val song: String?,
-): Serializable
+) : Serializable
