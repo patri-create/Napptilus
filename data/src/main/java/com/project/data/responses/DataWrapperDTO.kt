@@ -21,7 +21,8 @@ data class ResultDTO(
     val age: Int?,
     val country: String?,
     val height: Int?,
-    val id: Int?
+    val id: Int?,
+    val description: String?
 )
 
 data class FavoriteDTO(
@@ -51,7 +52,8 @@ fun ResultDTO.asDomain(): OompaLoompa =
         age,
         country,
         height,
-        id
+        id,
+        description
     )
 
 fun FavoriteDTO.asDomain(): Favorite = 

@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">napptilus</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
     <!--    Home  -->
     <string name="gender">Gender:</string>
     <string name="profession">Profession:</string>
     <string name="spinner_hint">Select profession</string>
+
+    <!--    Detail  -->
+    <string name="description">Description</string>
 
     <!--    Errors  -->
     <string name="error_connectivity">Connectivity error</string>

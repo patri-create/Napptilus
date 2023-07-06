@@ -8,4 +8,6 @@ import com.project.domain.OompaLoompa
 interface RemoteDataSource {
 
     suspend fun getOompaLoompasByPage(page: Int): Either<Error, DataWrapper>
+
+    suspend fun getOompaLoompasById(id: Int): Either<Error, OompaLoompa>
 }

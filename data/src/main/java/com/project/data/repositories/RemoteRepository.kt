@@ -12,4 +12,8 @@ class RemoteRepository @Inject constructor(private val remoteDataSource: RemoteD
     suspend fun getOompaLoompasByPage(page: Int): Either<Error, DataWrapper> {
         return remoteDataSource.getOompaLoompasByPage(page)
     }
+
+    suspend fun getOompaLoompasById(id: Int): Either<Error, OompaLoompa> {
+        return remoteDataSource.getOompaLoompasById(id)
+    }
 }

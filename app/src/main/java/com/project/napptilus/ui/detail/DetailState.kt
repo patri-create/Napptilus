@@ -1,17 +1,12 @@
-package com.project.napptilus.ui.home
+package com.project.napptilus.ui.detail
 
 import android.content.Context
 import androidx.navigation.NavController
 import com.project.domain.Error
-import com.project.domain.OompaLoompa
 import com.project.napptilus.R
+import com.project.napptilus.ui.home.HomeFragmentDirections
 
-class HomeState(private val context: Context, private val navController: NavController) {
-
-    fun onItemClick(id: Int) {
-        val action = HomeFragmentDirections.actionHomeDestToDetailDest(id)
-        navController.navigate(action)
-    }
+class DetailState (private val context: Context, private val navController: NavController) {
 
     fun errorToString(error: Error) = when (error) {
         Error.Connectivity -> context.getString(R.string.error_connectivity)

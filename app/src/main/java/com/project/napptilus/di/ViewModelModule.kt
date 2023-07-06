@@ -1,6 +1,7 @@
 package com.project.napptilus.di
 
 import com.project.data.repositories.RemoteRepository
+import com.project.usecases.GetOompaLoompasByIdUseCase
 import com.project.usecases.GetOompaLoompasByPageUseCase
 import dagger.Module
 import dagger.Provides
@@ -16,5 +17,11 @@ object ViewModelModule {
     @ViewModelScoped
     fun providesGetOompaLoompasByPageUseCase(remoteRepository: RemoteRepository): GetOompaLoompasByPageUseCase {
         return GetOompaLoompasByPageUseCase(remoteRepository)
+    }
+
+    @Provides
+    @ViewModelScoped
+    fun providesGetOompaLoompasByIdUseCase(remoteRepository: RemoteRepository): GetOompaLoompasByIdUseCase {
+        return GetOompaLoompasByIdUseCase(remoteRepository)
     }
 }

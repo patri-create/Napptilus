@@ -4,6 +4,7 @@ import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
 import com.project.data.responses.DataWrapperDTO
+import com.project.data.responses.ResultDTO
 import com.project.data.responses.asDomain
 import retrofit2.HttpException
 import java.io.IOException
@@ -19,6 +20,7 @@ suspend fun <T, R> domainCall(action: suspend () -> T): Either<Error, R> = try {
 fun <T, R> T.toDomain(): R {
     val result = when(this) {
         is DataWrapperDTO -> asDomain()
+        is ResultDTO -> asDomain()
         else -> throw IllegalArgumentException("Unsupported conversion")
     }
 

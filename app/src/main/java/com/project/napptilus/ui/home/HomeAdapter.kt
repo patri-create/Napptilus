@@ -7,7 +7,7 @@ import com.project.domain.OompaLoompa
 import com.project.napptilus.databinding.ItemCardOompaloompaBinding
 import kotlin.properties.Delegates
 
-class HomeAdapter(private val onClickItem: (OompaLoompa) -> Unit) :
+class HomeAdapter(private val onClickItem: (Int) -> Unit) :
     RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
     var items: List<OompaLoompa> by Delegates.observable(emptyList()) { _, _, _ ->
@@ -34,6 +34,6 @@ class HomeAdapter(private val onClickItem: (OompaLoompa) -> Unit) :
 
     private fun fillOompaLoompaItem(binding: ItemCardOompaloompaBinding, item: OompaLoompa) {
         binding.item = item
-        binding.root.setOnClickListener { onClickItem(item) }
+        binding.root.setOnClickListener { item.id?.let {onClickItem(it)} }
     }
 }

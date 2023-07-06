@@ -13,4 +13,8 @@ class RemoteDataSourceImp @Inject constructor(private val api: ApiService): Remo
     override suspend fun getOompaLoompasByPage(page: Int): Either<Error, DataWrapper> = domainCall {
         api.getOompaLoompasByPage(page)
     }
+
+    override suspend fun getOompaLoompasById(id: Int): Either<Error, OompaLoompa> = domainCall{
+        api.getOompaLoompasById(id)
+    }
 }

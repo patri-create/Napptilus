@@ -19,8 +19,9 @@ data class OompaLoompa(
     val age: Int?,
     val country: String?,
     val height: Int?,
-    val id: Int?
-): Serializable {
+    val id: Int?,
+    val description: String?
+) {
 
     fun getFullName(): String {
         return "$firstName $lastName"

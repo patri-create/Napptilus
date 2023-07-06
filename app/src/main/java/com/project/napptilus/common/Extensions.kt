@@ -19,6 +19,7 @@ import com.project.domain.OompaLoompa
 import com.project.napptilus.R
 import com.project.napptilus.ui.base.MainActivity
 import com.project.napptilus.ui.base.MainState
+import com.project.napptilus.ui.detail.DetailState
 import com.project.napptilus.ui.home.HomeAdapter
 import com.project.napptilus.ui.home.HomeState
 import kotlinx.coroutines.FlowPreview
@@ -64,6 +65,11 @@ fun Fragment.buildHomeState(
     context: Context = requireContext(),
     navController: NavController = findNavController()
 ) = HomeState(context, navController)
+
+fun Fragment.buildDetailState(
+    context: Context = requireContext(),
+    navController: NavController = findNavController()
+) = DetailState(context, navController)
 //endregion
 
 //region DataBindings
