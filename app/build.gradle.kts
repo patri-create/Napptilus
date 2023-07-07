@@ -69,98 +69,82 @@ android {
 
 dependencies {
     /* Modules */
-    implementation(project(":data"))
-    implementation(project(":domain"))
-    implementation(project(":usecases"))
+    implementation(project(":data")) // Implementation of data module
+    implementation(project(":domain")) // Implementation of domain module
+    implementation(project(":usecases")) // Implementation of usecases module
 
     /* Kotlin */
-    implementation(Libs.Kotlin.Coroutines.core)
+    implementation(Libs.Kotlin.Coroutines.core) // Kotlin Coroutines library for asynchronous programming
 
     /* AndroidX */
-    implementation(Libs.AndroidX.core)
-    implementation(Libs.AndroidX.appCompat)
-    implementation(Libs.AndroidX.material)
-    implementation(Libs.AndroidX.constraintLayout)
-    implementation(Libs.AndroidX.splash)
+    implementation(Libs.AndroidX.core) // AndroidX core library for compatible Android components
+    implementation(Libs.AndroidX.appCompat) // AndroidX AppCompat library for compatibility with older Android versions
+    implementation(Libs.AndroidX.material) // AndroidX Material Design components library
+    implementation(Libs.AndroidX.constraintLayout) // AndroidX ConstraintLayout library for flexible layouts
 
-    implementation(Libs.AndroidX.Activity.ktx)
+    implementation(Libs.AndroidX.Activity.ktx) // AndroidX Activity Kotlin extensions library
 
-    implementation(Libs.AndroidX.Lifecycle.viewmodelKtx)
-    implementation(Libs.AndroidX.Lifecycle.runtimeKtx)
+    implementation(Libs.AndroidX.Lifecycle.viewmodelKtx) // AndroidX Lifecycle ViewModel Kotlin extensions library
+    implementation(Libs.AndroidX.Lifecycle.runtimeKtx) // AndroidX Lifecycle Runtime Kotlin extensions library
 
-    implementation(Libs.AndroidX.Navigation.NavigationFragment)
-    implementation(Libs.AndroidX.Navigation.NavigationUI)
+    implementation(Libs.AndroidX.Navigation.NavigationFragment) // AndroidX Navigation Fragment library
+    implementation(Libs.AndroidX.Navigation.NavigationUI) // AndroidX Navigation UI library
 
-    implementation(Libs.AndroidX.SwipeLayout.swipe)
-
-    implementation(Libs.AndroidX.RecycleView.recycleview)
-    implementation(Libs.AndroidX.RecycleView.recycleviewSelection)
-
-    implementation(Libs.AndroidX.Drawer.drawer)
+    implementation(Libs.AndroidX.RecycleView.recycleview) // AndroidX RecyclerView library for creating lists and grids
 
     /* Glide */
-    implementation(Libs.Glide.glide)
-    implementation(Libs.Glide.compiler)
-
-    /* Dots Indicator */
-    implementation(Libs.DotsIndicator.dotsIndicator)
+    implementation(Libs.Glide.glide) // Glide library for image loading and display
+    implementation(Libs.Glide.compiler) // Glide annotation processor for code generation
 
 
     /* OkHttp3 */
-    implementation(Libs.OkHttp3.client)
-    implementation(Libs.OkHttp3.loginInterceptor)
-    implementation(Libs.OkHttp3.Profiler.profiler)
+    implementation(Libs.OkHttp3.client) // OkHttp3 HTTP client library
+    implementation(Libs.OkHttp3.loginInterceptor) // OkHttp3 login interceptor library
+    implementation(Libs.OkHttp3.Profiler.profiler) // OkHttp3 Profiler library for network profiling
 
     /* Retrofit */
-    implementation(Libs.Retrofit.retrofit)
-    implementation(Libs.Retrofit.converterMoshi)
-    implementation(Libs.Retrofit.converterJackson)
-
-    /* Moshi */
-    implementation(Libs.Moshi.moshi)
-    kapt(Libs.Moshi.moshiCodegen)
-    implementation(Libs.Moshi.moshiKotlin)
+    implementation(Libs.Retrofit.retrofit) // Retrofit library for type-safe HTTP requests and REST API consumption
+    implementation(Libs.Retrofit.converterMoshi) // Retrofit Moshi converter library for JSON parsing and serialization
+    implementation(Libs.Retrofit.converterJackson) // Retrofit Jackson converter library for JSON parsing and serialization
 
     /* Jackson */
-    implementation(Libs.Jackson.core)
-    implementation(Libs.Jackson.annotations)
-    implementation(Libs.Jackson.databind)
-    implementation(Libs.Jackson.kotlin)
+    implementation(Libs.Jackson.core) // Jackson core library for JSON parsing and serialization
+    implementation(Libs.Jackson.annotations) // Jackson annotations library
+    implementation(Libs.Jackson.databind) // Jackson databind library for JSON processing
+    implementation(Libs.Jackson.kotlin) // Jackson Kotlin module for Kotlin support
 
     /* Arrow */
-    implementation(Libs.Arrow.core)
+    implementation(Libs.Arrow.core) // Arrow library for functional programming in Kotlin
 
-    /* Hilt */
-    implementation(Libs.Hilt.android)
-    kapt(Libs.Hilt.compiler)
-
-    /* Location Services */
-    implementation(Libs.playServicesLocation)
+/* Hilt */
+    implementation(Libs.Hilt.android) // Hilt Android library for dependency injection in Android
+    kapt(Libs.Hilt.compiler) // Hilt annotation processor for code generation
 
     /* PowerSpinner */
-    implementation(Libs.PowerSpinner.spinner)
+    implementation(Libs.PowerSpinner.spinner) // PowerSpinner library for customizable spinner UI
 
     /* Shimmer */
-    implementation(Libs.Shimmer.shimmer)
+    implementation(Libs.Shimmer.shimmer) // Shimmer library for creating shimmering effects
 
     /* Timber */
-    implementation(Libs.Timber.timber)
+    implementation(Libs.Timber.timber) // Timber library for logging
 
     /* Test */
-    testImplementation(Libs.JUnit.junit)
-    testImplementation(Libs.Mockito.kotlin)
-    testImplementation(Libs.Mockito.inline)
-    testImplementation(Libs.Kotlin.Coroutines.test)
-    testImplementation(Libs.Turbine.turbine)
+    testImplementation(Libs.JUnit.junit) // JUnit library for unit testing
+    testImplementation(Libs.Mockito.kotlin) // Mockito Kotlin library for mocking dependencies
+    testImplementation(Libs.Mockito.inline) // Mockito inline library for inline mocking syntax
+    testImplementation(Libs.Kotlin.Coroutines.test) // Kotlin Coroutines test library for testing asynchronous code
+    testImplementation(Libs.Turbine.turbine) // Turbine library for testing Kotlin Flows
 
-    androidTestImplementation(Libs.AndroidX.Test.Ext.junit)
-    androidTestImplementation(Libs.AndroidX.Test.Espresso.contrib)
-    androidTestImplementation(Libs.AndroidX.Test.runner)
-    androidTestImplementation(Libs.AndroidX.Test.rules)
-    androidTestImplementation(Libs.Hilt.test)
-    androidTestImplementation(Libs.Kotlin.Coroutines.test)
-    kaptAndroidTest(Libs.Hilt.compiler)
+    androidTestImplementation(Libs.AndroidX.Test.Ext.junit) // AndroidX Test extensions JUnit library for Android unit testing
+    androidTestImplementation(Libs.AndroidX.Test.Espresso.contrib) // AndroidX Test Espresso contributions library for UI testing
+    androidTestImplementation(Libs.AndroidX.Test.runner) // AndroidX Test runner library for running Android tests
+    androidTestImplementation(Libs.AndroidX.Test.rules) // AndroidX Test rules library for defining test rules
+    androidTestImplementation(Libs.Hilt.test) // Hilt test library for testing Hilt dependencies
+    androidTestImplementation(Libs.Kotlin.Coroutines.test) // Kotlin Coroutines test library for testing asynchronous code
+    kaptAndroidTest(Libs.Hilt.compiler) // Hilt annotation processor for code generation
 
-    androidTestImplementation(Libs.OkHttp3.mockWebServer)
+    androidTestImplementation(Libs.OkHttp3.mockWebServer) // OkHttp3 mock web server library for testing HTTP interactions
+
 
 }
